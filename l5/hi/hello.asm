@@ -1,0 +1,13 @@
+DOSSEG 
+.MODEL TINY
+.CODE
+ORG 100H
+Start: 
+JMP Begin
+HELLO DB 'HELLO, WORLD!$'
+Begin:  
+	MOV DX, offset HELLO
+	MOV AH, 9
+	INT 21H
+	INT 20h
+END Start
